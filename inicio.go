@@ -31,6 +31,13 @@ func getNombreyEdad() (dato1 string, dato2 int)  {
 	return
 }
 
+func getPedidos(pedido int, moneda string) (string,int,string) {
+	precio := func() int{
+		return pedido * 7
+	}
+	return "El precio del pedido: ",precio(), moneda
+}
+
 func main() {
 	var persona1 = Cliente {
 		rut: "16006363-7",
@@ -56,5 +63,6 @@ func main() {
 
 	fmt.Println(getNombreyApellido())
 	fmt.Println(getNombreyEdad())
+	fmt.Println(getPedidos(22,"$"))
 	
 }
