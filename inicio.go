@@ -11,6 +11,26 @@ type Cliente struct {
 	edad int
 }
 
+type Producto struct {
+	codigo string
+	nombre string
+	valor int
+}
+
+func getNombre()  {
+	fmt.Println("funcion getNombre")
+}
+
+func getNombreyApellido() (string,string) {
+	return "nombre", "apellido"
+}
+
+func getNombreyEdad() (dato1 string, dato2 int)  {
+	dato1 = "Manuel"
+	dato2 = 34
+	return
+}
+
 func main() {
 	var persona1 = Cliente {
 		rut: "16006363-7",
@@ -28,5 +48,13 @@ func main() {
 	fmt.Println(pais)
 	fmt.Println(persona1)
 
+	var telefono = Producto{"123","Samsung", 50000}
+	fmt.Println(telefono.nombre)
+	//fmt.Print(telefono)
+
+	getNombre()
+
+	fmt.Println(getNombreyApellido())
+	fmt.Println(getNombreyEdad())
 	
 }
