@@ -71,5 +71,10 @@ func main() {
 	fmt.Println(getNombreyEdad())
 	fmt.Println(getPedidos(22,"$"))
 	pedidos("pantalon","zapatillas","gorra")
-	
+
+	var peliculas = [3]string{
+		"Batman",
+		"Uno",
+		"Dos"}
+	fmt.Println(peliculas)
 }
