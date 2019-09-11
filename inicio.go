@@ -38,6 +38,12 @@ func getPedidos(pedido int, moneda string) (string,int,string) {
 	return "El precio del pedido: ",precio(), moneda
 }
 
+func pedidos(caracteristicas ...string)  {
+	for _, caracteristica := range caracteristicas  {
+		fmt.Println(caracteristica)
+	}
+}
+
 func main() {
 	var persona1 = Cliente {
 		rut: "16006363-7",
@@ -56,13 +62,14 @@ func main() {
 	fmt.Println(persona1)
 
 	var telefono = Producto{"123","Samsung", 50000}
-	fmt.Println(telefono.nombre)
-	//fmt.Print(telefono)
+	//fmt.Println(telefono.nombre)
+	fmt.Print(telefono)
 
 	getNombre()
 
 	fmt.Println(getNombreyApellido())
 	fmt.Println(getNombreyEdad())
 	fmt.Println(getPedidos(22,"$"))
+	pedidos("pantalon","zapatillas","gorra")
 	
 }
