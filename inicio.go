@@ -46,6 +46,10 @@ func pedidos(caracteristicas ...string)  {
 	}
 }
 
+func getVariables() (int, int, int)  {
+	return 1,2,3
+}
+
 func main() {
 	var persona1 = Cliente {
 		rut: "16006363-7",
@@ -90,4 +94,31 @@ func main() {
 	fmt.Println(numeros)
 	numeros = append(numeros, "cuatro")
 	fmt.Println(numeros [0:2])
+
+	a, b, c := getVariables()
+	fmt.Println(a,b,c)
+
+	//Calculadora
+	var num1, num2 int
+	fmt.Println("Ingrese primer número: ")
+	fmt.Scanf("%d",&num1)
+	fmt.Println("Ingrese segundo número: ")
+	fmt.Scanf("%d",&num2)
+	fmt.Println(sumar(num1,num2))
+	fmt.Println(restar(num1,num2))
+	fmt.Println(multiplicar(num1,num2))
+
+	fmt.Println(string("Hola" [0]))
+}
+
+func sumar(a int, b int) int  {
+	return a+b
+}
+
+func restar(a int, b int) int {
+	return a-b
+}
+
+func multiplicar(a int, b int)  int{
+	return a*b
 }
