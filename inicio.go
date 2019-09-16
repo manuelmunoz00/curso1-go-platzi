@@ -1,6 +1,8 @@
 package main
 
 import (
+	"cursogo/name"
+	numeros2 "cursogo/numeros"
 	"fmt"
 	"strings"
 )
@@ -20,9 +22,7 @@ type Producto struct {
 	valor int
 }
 
-func getNombre()  {
-	fmt.Println("funcion getNombre")
-}
+
 
 func getNombreyApellido() (string,string) {
 	return "nombre", "apellido"
@@ -47,10 +47,6 @@ func pedidos(caracteristicas ...string)  {
 	}
 }
 
-func getVariables() (int, int, int)  {
-	return 1,2,3
-}
-
 func main() {
 	var persona1 = Cliente {
 		rut: "16006363-7",
@@ -70,9 +66,9 @@ func main() {
 
 	var telefono = Producto{"123","Samsung", 50000}
 	//fmt.Println(telefono.nombre)
-	fmt.Print(telefono)
+	fmt.Println(telefono)
 
-	getNombre()
+	name.GetNombre()
 
 	fmt.Println(getNombreyApellido())
 	fmt.Println(getNombreyEdad())
@@ -96,7 +92,7 @@ func main() {
 	numeros = append(numeros, "cuatro")
 	fmt.Println(numeros [0:2])
 
-	a, b, c := getVariables()
+	a, b, c := name.GetVariables()
 	fmt.Println(a,b,c)
 
 	//Calculadora
@@ -105,61 +101,19 @@ func main() {
 	fmt.Scanf("%d",&num1)
 	fmt.Println("Ingrese segundo número: ")
 	fmt.Scanf("%d",&num2)
-	fmt.Println(sumar(num1,num2))
-	fmt.Println(restar(num1,num2))
-	fmt.Println(multiplicar(num1,num2))
+	fmt.Println(numeros2.Sumar(num1,num2))
+	fmt.Println(numeros2.Restar(num1,num2))
+	fmt.Println(numeros2.Multiplicar(num1,num2))
 	fmt.Println(string("Hola" [0]))
 
-	getArray()
-	getSlice()
-	getParoImpar()
+	name.GetArray()
+	name.GetSlice()
+	numeros2.GetParoImpar()
 	fortest()
 	string2()
 }
 
-func sumar(a int, b int) int  {
-	return a+b
-}
 
-func restar(a int, b int) int {
-	return a-b
-}
-
-func multiplicar(a int, b int)  int{
-	return a*b
-}
-
-// arrays(de tamaño fijo)
-func getArray() {
-	var arr1[2] string
-	arr1[0] = "uno"
-	arr1[1] = "dos"
-	fmt.Println(arr1)
-}
-
-//array (no se declara tamaño)
-func getSlice()  {
-	var slice1[] string
-	slice1 = append(slice1, "1")
-	slice1 = append(slice1, "2")
-	fmt.Println(slice1)
-}
-
-func getParoImpar()   {
-	var number = 0
-	fmt.Println("ingresa un numero del 1 al 10: ")
-	fmt.Scanf("%d",&number)
-	if number % 2 == 0 {
-		fmt.Println("es par")
-	}else {
-		fmt.Println("es impar")
-	}
-
-	//declaración y verificación en if
-	if number2 := 3; number2 == 3 {
-		fmt.Println("Entro al condicional")
-	}
-}
 
 func fortest()  {
 	for i := 0; i<100; i++  {
