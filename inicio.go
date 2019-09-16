@@ -112,6 +112,7 @@ func main() {
 	getArray()
 	getSlice()
 	getParoImpar()
+	fortest()
 }
 
 func sumar(a int, b int) int  {
@@ -155,5 +156,26 @@ func getParoImpar()   {
 	//declaración y verificación en if
 	if number2 := 3; number2 == 3 {
 		fmt.Println("Entro al condicional")
+	}
+}
+
+func fortest()  {
+	for i := 0; i<100; i++  {
+		fmt.Println("valor de i: ",i)
+	}
+
+	c := 100
+	for c > 0  {
+		c -= 10
+		fmt.Println("valor de c",c)
+	}
+
+	s := 1000
+	for{
+		s -= 1
+		if s==0 {
+			fmt.Println("Termina el for infinito")
+			break
+		}
 	}
 }
