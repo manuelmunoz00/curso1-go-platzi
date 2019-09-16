@@ -20,3 +20,12 @@ func InterfaceTest()  {
 func callSuscribe(p Platzi)  {
 	p.Suscribirse("Manuel")
 }
+
+//Interfaz de Rectangulo y Trapecio
+type FiguraGeometrica interface {
+	Area() float64
+}
+
+func ObtenerArea(figura FiguraGeometrica) float64  {
+	return figura.Area()
+}

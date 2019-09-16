@@ -121,18 +121,6 @@ func main() {
 	fmt.Println(maps.GetMapaEdades())
 	fmt.Println(maps.GetEdad("Diego"))
 
-	pc := structs.PlatziCourse{
-		Name:   "Go",
-		Slug:   "go",
-		Skills: []string{"1","2"},
-	}
-	fmt.Println(pc)
-	pc1 := new(structs.PlatziCourse)
-	pc1.Name = "Node"
-	pc1.Slug = "node"
-	pc1.Skills = []string{"backend","js"}
-	fmt.Println(pc1)
-
 	/*
 	curso1 := structs.Curso{
 		Temario: "Docker",
@@ -150,7 +138,18 @@ func main() {
 	}
 	fmt.Println(carrera1)
 	*/
-	structs.InterfaceTest()
+	//structs.InterfaceTest()
+
+
+	r1 := new(structs.Rectangulo)
+	r1.Base = 4
+	r1.Altura = 7.5
+	t1 := new(structs.Trapecio)
+	t1.BaseMayor = 5
+	t1.BaseMenor = 2
+	t1.Altura = 3
+	fmt.Println(structs.ObtenerArea(r1))
+	fmt.Println(structs.ObtenerArea(t1))
 }
 
 

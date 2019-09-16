@@ -22,3 +22,26 @@ type Carrera struct {
 func (c Carrera) Suscribirse(nombre string)  {
 	fmt.Printf("La persona %s se ha registrado en la carrera %s",nombre,c.Nombre)
 }
+
+// Estructura Rectangulo
+type Rectangulo struct {
+	Base float64
+	Altura float64
+}
+
+// Estructura Trapecio
+type Trapecio struct {
+	BaseMayor float64
+	BaseMenor float64
+	Altura float64
+}
+
+// Método de la estructura Rectangulo
+func (figura Rectangulo) Area() float64  {
+	return figura.Base * figura.Altura
+}
+
+// Método de la estructura Trapecio
+func (figura Trapecio) Area() float64  {
+	return (figura.BaseMayor + figura.BaseMenor) * figura.Altura / 2
+}
