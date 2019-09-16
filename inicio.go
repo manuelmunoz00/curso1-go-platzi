@@ -31,6 +31,16 @@ type PlatziCourse struct {
 	Skills [] string
 }
 
+type Curso struct {
+	Temario string
+	Tiempo int
+}
+
+type Carrera struct {
+	Nombre string
+	Cursos []Curso
+}
+
 func getNombreyApellido() (string,string) {
 	return "nombre", "apellido"
 }
@@ -135,6 +145,20 @@ func main() {
 	pc1.Slug = "node"
 	pc1.Skills = []string{"backend","js"}
 	fmt.Println(pc1)
+
+	curso1 := Curso{
+		Temario: "Docker",
+		Tiempo:  20,
+	}
+	curso2 := Curso{
+		Temario: "Kubernetes",
+		Tiempo:  30,
+	}
+	carrera1 := Carrera{
+		Nombre: "Devops",
+		Cursos: [] Curso{ curso1, curso2},
+	}
+	fmt.Println(carrera1)
 }
 
 
