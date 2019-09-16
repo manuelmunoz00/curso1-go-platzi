@@ -4,12 +4,6 @@ import (
 	"fmt"
 )
 
-type PlatziCourse struct {
-	Name string
-	Slug string
-	Skills [] string
-}
-
 type Curso struct {
 	Temario string
 	Tiempo int
