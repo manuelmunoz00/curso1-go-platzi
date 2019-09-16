@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+const hello  string = "Hola %s"
+
 type Cliente struct {
 	rut string
 	nombres string
@@ -72,9 +74,20 @@ func main() {
 	fmt.Println(getPedidos(22,"$"))
 	pedidos("pantalon","zapatillas","gorra")
 
+	//array
 	var peliculas = [3]string{
 		"Batman",
 		"Uno",
 		"Dos"}
 	fmt.Println(peliculas)
+
+	//slices (arrays dinámicos)
+	var numeros = [] string{
+		"uno",
+		"dos",
+		"tres"}
+
+	fmt.Println(numeros)
+	numeros = append(numeros, "cuatro")
+	fmt.Println(numeros [0:2])
 }
