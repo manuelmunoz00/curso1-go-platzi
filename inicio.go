@@ -107,8 +107,10 @@ func main() {
 	fmt.Println(sumar(num1,num2))
 	fmt.Println(restar(num1,num2))
 	fmt.Println(multiplicar(num1,num2))
-
 	fmt.Println(string("Hola" [0]))
+
+	getArray()
+	getSlice()
 }
 
 func sumar(a int, b int) int  {
@@ -122,3 +124,20 @@ func restar(a int, b int) int {
 func multiplicar(a int, b int)  int{
 	return a*b
 }
+
+// arrays(de tamaño fijo)
+func getArray() {
+	var arr1[2] string
+	arr1[0] = "uno"
+	arr1[1] = "dos"
+	fmt.Println(arr1)
+}
+
+//array (no se declara tamaño)
+func getSlice()  {
+	var slice1[] string
+	slice1 = append(slice1, "1")
+	slice1 = append(slice1, "2")
+	fmt.Println(slice1)
+}
+
