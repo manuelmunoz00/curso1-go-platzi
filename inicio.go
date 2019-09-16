@@ -2,8 +2,8 @@ package main
 
 import (
 	/*
-	"cursogo/name"
-	numeros2 "cursogo/numeros"
+		"cursogo/name"
+		numeros2 "cursogo/numeros"
 	*/
 	"cursogo/maps"
 	"fmt"
@@ -25,7 +25,11 @@ type Producto struct {
 	valor int
 }
 
-
+type PlatziCourse struct {
+	Name string
+	Slug string
+	Skills [] string
+}
 
 func getNombreyApellido() (string,string) {
 	return "nombre", "apellido"
@@ -119,6 +123,18 @@ func main() {
 	fmt.Println(maps.GetMap())
 	fmt.Println(maps.GetMapaEdades())
 	fmt.Println(maps.GetEdad("Diego"))
+
+	pc := PlatziCourse{
+		Name:   "Go",
+		Slug:   "go",
+		Skills: []string{"1","2"},
+	}
+	fmt.Println(pc)
+	pc1 := new(PlatziCourse)
+	pc1.Name = "Node"
+	pc1.Slug = "node"
+	pc1.Skills = []string{"backend","js"}
+	fmt.Println(pc1)
 }
 
 
