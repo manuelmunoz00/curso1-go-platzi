@@ -35,6 +35,10 @@ type Curso struct {
 	Temario string
 	Tiempo int
 }
+//Método de la estructura Curso, solo se puede iniciar con una instancia de la estructura Curso y recibe un string
+func (c Curso) suscribirse(nombre string)  {
+	fmt.Printf("La persona %s se ha registrado en el curso %s",nombre,c.Temario)
+}
 
 type Carrera struct {
 	Nombre string
@@ -150,10 +154,12 @@ func main() {
 		Temario: "Docker",
 		Tiempo:  20,
 	}
+	curso1.suscribirse("Manuel Muñoz")
 	curso2 := Curso{
 		Temario: "Kubernetes",
 		Tiempo:  30,
 	}
+
 	carrera1 := Carrera{
 		Nombre: "Devops",
 		Cursos: [] Curso{ curso1, curso2},
