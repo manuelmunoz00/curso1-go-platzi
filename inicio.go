@@ -6,6 +6,7 @@ import (
 		numeros2 "cursogo/numeros"
 	*/
 	"cursogo/maps"
+	"cursogo/structs"
 	"fmt"
 	"strings"
 )
@@ -25,25 +26,7 @@ type Producto struct {
 	valor int
 }
 
-type PlatziCourse struct {
-	Name string
-	Slug string
-	Skills [] string
-}
 
-type Curso struct {
-	Temario string
-	Tiempo int
-}
-//Método de la estructura Curso, solo se puede iniciar con una instancia de la estructura Curso y recibe un string
-func (c Curso) suscribirse(nombre string)  {
-	fmt.Printf("La persona %s se ha registrado en el curso %s",nombre,c.Temario)
-}
-
-type Carrera struct {
-	Nombre string
-	Cursos []Curso
-}
 
 func getNombreyApellido() (string,string) {
 	return "nombre", "apellido"
@@ -138,33 +121,36 @@ func main() {
 	fmt.Println(maps.GetMapaEdades())
 	fmt.Println(maps.GetEdad("Diego"))
 
-	pc := PlatziCourse{
+	pc := structs.PlatziCourse{
 		Name:   "Go",
 		Slug:   "go",
 		Skills: []string{"1","2"},
 	}
 	fmt.Println(pc)
-	pc1 := new(PlatziCourse)
+	pc1 := new(structs.PlatziCourse)
 	pc1.Name = "Node"
 	pc1.Slug = "node"
 	pc1.Skills = []string{"backend","js"}
 	fmt.Println(pc1)
 
-	curso1 := Curso{
+	/*
+	curso1 := structs.Curso{
 		Temario: "Docker",
 		Tiempo:  20,
 	}
-	curso1.suscribirse("Manuel Muñoz")
-	curso2 := Curso{
+	curso1.Suscribirse("Manuel Muñoz")
+	curso2 := structs.Curso{
 		Temario: "Kubernetes",
 		Tiempo:  30,
 	}
 
-	carrera1 := Carrera{
+	carrera1 := structs.Carrera{
 		Nombre: "Devops",
-		Cursos: [] Curso{ curso1, curso2},
+		Cursos: [] structs.Curso{ curso1, curso2},
 	}
 	fmt.Println(carrera1)
+	*/
+	structs.InterfaceTest()
 }
 
 
