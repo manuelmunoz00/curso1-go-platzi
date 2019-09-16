@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 const hello  string = "Hola %s"
@@ -113,6 +114,7 @@ func main() {
 	getSlice()
 	getParoImpar()
 	fortest()
+	string2()
 }
 
 func sumar(a int, b int) int  {
@@ -178,4 +180,12 @@ func fortest()  {
 			break
 		}
 	}
+}
+// métodos de string
+func string2()  {
+	var hello string = "hola"
+	fmt.Println(strings.ToUpper(hello))
+	var reemplazar string = "hello 1, hello 2, hello 3"
+	fmt.Println(strings.Replace(reemplazar,"hello","hola",-1))
+	fmt.Println(strings.Split(reemplazar," "))
 }
