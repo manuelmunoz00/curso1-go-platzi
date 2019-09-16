@@ -1,8 +1,11 @@
 package main
 
 import (
+	/*
 	"cursogo/name"
 	numeros2 "cursogo/numeros"
+	*/
+	"cursogo/maps"
 	"fmt"
 	"strings"
 )
@@ -48,6 +51,7 @@ func pedidos(caracteristicas ...string)  {
 }
 
 func main() {
+	/*
 	var persona1 = Cliente {
 		rut: "16006363-7",
 		nombres: "Manuel Alejandro",
@@ -111,6 +115,10 @@ func main() {
 	numeros2.GetParoImpar()
 	fortest()
 	string2()
+	*/
+	fmt.Println(maps.GetMap())
+	fmt.Println(maps.GetMapaEdades())
+	fmt.Println(maps.GetEdad("Diego"))
 }
 
 
