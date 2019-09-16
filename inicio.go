@@ -150,6 +150,9 @@ func main() {
 	t1.Altura = 3
 	fmt.Println(structs.ObtenerArea(r1))
 	fmt.Println(structs.ObtenerArea(t1))
+	fmt.Println("-------")
+	fmt.Println(structs.ObtenerPerimetro(r1))
+	fmt.Println(structs.ObtenerPerimetro(t1))
 }
 
 

@@ -45,3 +45,11 @@ func (figura Rectangulo) Area() float64  {
 func (figura Trapecio) Area() float64  {
 	return (figura.BaseMayor + figura.BaseMenor) * figura.Altura / 2
 }
+
+func (figura Rectangulo) Perimetro() float64  {
+	return 2 * (figura.Base + figura.Altura)
+}
+
+func (figura Trapecio) Perimetro() float64  {
+	return figura.BaseMenor + figura.BaseMayor + figura.Altura
+}

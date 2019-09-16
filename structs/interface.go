@@ -24,8 +24,13 @@ func callSuscribe(p Platzi)  {
 //Interfaz de Rectangulo y Trapecio
 type FiguraGeometrica interface {
 	Area() float64
+	Perimetro() float64
 }
 
 func ObtenerArea(figura FiguraGeometrica) float64  {
 	return figura.Area()
+}
+
+func ObtenerPerimetro(figura FiguraGeometrica) float64  {
+	return figura.Perimetro()
 }
