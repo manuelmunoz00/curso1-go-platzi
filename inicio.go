@@ -153,6 +153,11 @@ func main() {
 	fmt.Println("-------")
 	fmt.Println(structs.ObtenerPerimetro(r1))
 	fmt.Println(structs.ObtenerPerimetro(t1))
+	fmt.Println("Circulo a continuación")
+	c1 := new(structs.Circulo)
+	c1.Radio = 20
+	fmt.Println(structs.ObtenerArea(c1))
+	fmt.Println(structs.ObtenerPerimetro(c1))
 }
 
 

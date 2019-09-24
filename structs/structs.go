@@ -2,6 +2,7 @@ package structs
 
 import (
 	"fmt"
+	"math"
 )
 
 type Curso struct {
@@ -36,6 +37,10 @@ type Trapecio struct {
 	Altura float64
 }
 
+type Circulo struct {
+	Radio float64
+}
+
 // Método de la estructura Rectangulo
 func (figura Rectangulo) Area() float64  {
 	return figura.Base * figura.Altura
@@ -52,4 +57,14 @@ func (figura Rectangulo) Perimetro() float64  {
 
 func (figura Trapecio) Perimetro() float64  {
 	return figura.BaseMenor + figura.BaseMayor + figura.Altura
+}
+
+// Método de la estructura Circulo
+func (figura Circulo) Area() float64  {
+	return math.Pi * figura.Radio * figura.Radio
+}
+
+// Método de la estructura Circulo
+func (figura Circulo) Perimetro() float64  {
+	return 2 * math.Pi * figura.Radio
 }
