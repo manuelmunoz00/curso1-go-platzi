@@ -51,7 +51,12 @@ func pedidos(caracteristicas ...string)  {
 	}
 }
 
+func deferTest()  {
+	fmt.Println("Función defer que se ejecuta al final")
+}
+
 func main() {
+	defer deferTest()
 	/*
 	var persona1 = Cliente {
 		rut: "16006363-7",
