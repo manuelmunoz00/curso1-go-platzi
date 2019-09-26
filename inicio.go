@@ -1,12 +1,12 @@
 package main
 
 import (
+	"cursogo/maps"
 	/*
 		"cursogo/name"
-		numeros2 "cursogo/numeros"
+
 	*/
-	"cursogo/maps"
-	"cursogo/structs"
+	numeros2 "cursogo/numeros"
 	"fmt"
 	"strings"
 )
@@ -145,7 +145,7 @@ func main() {
 	*/
 	//structs.InterfaceTest()
 
-
+	/*
 	r1 := new(structs.Rectangulo)
 	r1.Base = 4
 	r1.Altura = 7.5
@@ -163,6 +163,13 @@ func main() {
 	c1.Radio = 20
 	fmt.Println(structs.ObtenerArea(c1))
 	fmt.Println(structs.ObtenerPerimetro(c1))
+	*/
+
+	number,err := numeros2.Sumar(20,30)
+	if err != nil{
+		panic(err)
+	}
+	fmt.Println(number)
 }
 
 

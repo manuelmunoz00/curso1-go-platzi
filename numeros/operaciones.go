@@ -1,10 +1,22 @@
 package numeros
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // Sumar
-func Sumar(a int, b int) int  {
-	return a+b
+func Sumar(a interface{}, b interface{}) (int,error)  {
+	switch a.(type) {
+	case string:
+		return 0,errors.New("El valor de a es un string")
+	}
+
+	switch b.(type) {
+	case string:
+		return 0, errors.New("El valor de b es un string")
+	}
+	return a.(int) + b.(int),nil
 }
 // Restar
 func Restar(a int, b int) int {
