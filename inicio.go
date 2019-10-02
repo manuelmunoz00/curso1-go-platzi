@@ -2,13 +2,9 @@ package main
 
 import (
 	"cursogo/maps"
-	/*
-		"cursogo/name"
-
-	*/
-	numeros2 "cursogo/numeros"
 	"fmt"
 	"strings"
+	"time"
 )
 
 const hello  string = "Hola %s"
@@ -165,13 +161,27 @@ func main() {
 	fmt.Println(structs.ObtenerPerimetro(c1))
 	*/
 
+	/*
 	number,err := numeros2.Sumar(20,30)
 	if err != nil{
 		panic(err)
 	}
 	fmt.Println(number)
+	*/
+	go forGo(500)
+	go forGo(400)
+	time.Sleep(10000 * time.Millisecond)
 }
 
+func helloGo(index int){
+	fmt.Println("Hola soy un print de la gorutine #",index)
+}
+
+func forGo(n int)  {
+	for i:=0; i<n; i++ {
+		go helloGo(i)
+	}
+}
 
 
 func fortest()  {
